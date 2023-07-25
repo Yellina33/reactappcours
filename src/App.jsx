@@ -2,7 +2,7 @@ import { useState } from "react";
 import Account from "./components/exemples/Account";
 import Address from "./components/exemples/Address";
 import NavBar from "./components/exemples/NavBar";
-import Card from "./components/exemples/Card";
+import ProductCard from "./components/exemples/ProductCard"
 
 
 const App = () => {
@@ -23,12 +23,6 @@ const App = () => {
     phone: "06.20.7.96.57"
   })
 
-  const [movie1] = useState({
-    name:"Transfomrers",
-    price:"3.99€",
-    description:"All the machines recorver streignt and power to take revenge of the humanity. More action and effects on this new launch of the Saga",
-    stock:"20"
-  })
 
   return (
     <div>
@@ -36,7 +30,7 @@ const App = () => {
       <NavBar/>
       
       <div className="container py-5">
-        <h1 className="display-6">Mon application</h1>
+        <h1 className="display-6">Buy with ease</h1>
         <Address address={fullAddress} />
       </div>
 
@@ -45,9 +39,15 @@ const App = () => {
         <Account infoAccount={account2} />
       </div>
 
-      <div className="container bg-gradient px-4 py-5 mt-2 rounded-3 h-auto">
-        <Card infoMovie={movie1}/>
-     
+      <div className="container bg-gradient px-4 py-5 mt-4 rounded-3 d-flex flex-wrap">
+        <ProductCard 
+        name="Transformers"
+        img="/src/asses/transformer.jpg"
+        description="All the machines recorver streignt and power to take revenge of the humanity. More action and effects on this new launch of the Saga"
+        price={3.99}
+        stock="20"
+        />
+            
       </div>
       
     </div>
