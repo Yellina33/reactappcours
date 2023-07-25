@@ -1,9 +1,10 @@
-function Address() {
+function Address(props) {
     return(
-        <div><small>17 rue Roger Salengro <br/> 59320 HLH</small><br /><br />
-        <form action="" method="get">
+        <div>
+            <h4 className="fs-5">{props.address}</h4>
+        <form action="" method="get" id="form">
             <label htmlFor="email">Email address</label><br />
-            <input type="email"/>
+            <input type="email" id="email" name="email" size="60"/>
         </form>
         </div>
 

@@ -1,10 +1,10 @@
-const Account = () => {
+const Account = ({ infoAccount }) => {
     return (
-        <div>
-            <h3>Nom complet: Paul-Esteban</h3>
-            <h3>Pseudo: Querubio Mate</h3>
-            <h4>Email: querubio@gmail.com</h4>
-            <h5>Pseudo: 01 23 45 67 89</h5>
+        <div id="cardAccount">
+            <h3 className="fs-4">Nom complet: {infoAccount.name}</h3>
+            <p>Pseudo: {infoAccount.username}</p>
+            <p>Email: {infoAccount.email}</p>
+            <p>{infoAccount.phone}</p>
         </div>
     );
 };
