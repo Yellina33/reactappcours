@@ -5,6 +5,7 @@ import NavBar from "./components/exemples/NavBar";
 import ProductCard from "./components/exemples/ProductCard"
 
 
+
 const App = () => {
   const [fullAddress] =  useState("59000 Lille, France")
   
@@ -99,7 +100,8 @@ const App = () => {
         />
             
       </div>
-      
+
+    
     </div>
   );
 };
