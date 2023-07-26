@@ -6,7 +6,7 @@ import ProductCard from "./components/exemples/ProductCard"
 
 
 const App = () => {
-  const [fullAddress] =  useState("33 rue Anatole France 59000 Lille")
+  const [fullAddress] =  useState("59000 Lille, France")
   
   
   const [account] = useState({
@@ -23,14 +23,22 @@ const App = () => {
     phone: "06.20.7.96.57"
   })
 
+  const [product] = useState({
+    name: "Transformers",
+    img: "/src/asses/transformer.jpg",
+    description:"All the machines recorver streignt and power to take revenge of the humanity. More action and effects on this new launch of the Saga",
+    price: 3.99,
+    stock: 20,
+  });
+ 
 
   return (
-    <div>
+    <div className="bg-gradient">
       
       <NavBar/>
       
       <div className="container py-5">
-        <h1 className="display-6">Buy with ease</h1>
+        <h1 className="mainText">Stream with ease</h1>
         <Address address={fullAddress} />
       </div>
 
@@ -39,13 +47,55 @@ const App = () => {
         <Account infoAccount={account2} />
       </div>
 
-      <div className="container bg-gradient px-4 py-5 mt-4 rounded-3 d-flex flex-wrap">
+      <div className="container bg-gradient px-3 py-5 mt-4 rounded-3 d-flex flex-wrap justify-content-evenly">
         <ProductCard 
-        name="Transformers"
-        img="/src/asses/transformer.jpg"
-        description="All the machines recorver streignt and power to take revenge of the humanity. More action and effects on this new launch of the Saga"
-        price={3.99}
-        stock="20"
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
+        />
+        <ProductCard 
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
+        />
+        <ProductCard 
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
+        />
+        <ProductCard 
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
+        />
+        <ProductCard 
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
+        />
+        <ProductCard 
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
+        />
+        <ProductCard 
+        name={product.name}
+        img={product.img}
+        description={product.description}
+        price={product.price}
+        stock={product.stock}
         />
             
       </div>
@@ -54,4 +104,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;

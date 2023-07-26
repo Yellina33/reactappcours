@@ -1,4 +1,7 @@
+import { useState } from "react";
+import NavConnect from "./NavConnect";
 const NavBar = () => {
+
     return(
     <nav className="navbar bg-gradient shadow bg-primary mx-0">
         <div className="container d-flex">
@@ -9,13 +12,15 @@ const NavBar = () => {
                     <a href="#" className="nav-link text-light">Products</a>
                     <a href="#" className="nav-link text-light">Connnetion</a>
                     <a href="#" className="nav-link text-light">Contact</a>
+                    <NavConnect/>
+                    
             </div>
         </div>
     </nav>
-    )
+    );
     
-}
+};
 
 
 
-export default NavBar
+export default NavBar;

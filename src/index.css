@@ -8,6 +8,18 @@ body {
     margin: 0;
 }
 
+.mainText {
+    color: orange;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.subtitle {
+    color: orange;
+    font-size: 20px;
+}
 
 
 #cardAccount {
