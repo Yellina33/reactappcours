@@ -3,6 +3,7 @@ import Account from "./components/exemples/Account";
 import Address from "./components/exemples/Address";
 import NavBar from "./components/exemples/NavBar";
 import ProductCard from "./components/exemples/ProductCard"
+import FormUser from "./components/exemples/FormUser";
 
 
 
@@ -40,15 +41,18 @@ const App = () => {
       
       <div className="container py-5">
         <h1 className="mainText">Stream with ease</h1>
+       
         <Address address={fullAddress} />
+        
       </div>
-
-      <div className="container d-flex gap-2 py-4">
+      <div className="container"> <h2>Current users</h2></div>
+      <div className="container d-flex gap-2">
+       
         <Account infoAccount={account} />
         <Account infoAccount={account2} />
       </div>
 
-      <div className="container bg-gradient px-3 py-5 mt-4 rounded-3 d-flex flex-wrap justify-content-evenly">
+      <div className="container bg-gradient px-3 p-5 mt-5 rounded-3 d-flex flex-wrap justify-content-evenly">
         <ProductCard 
         name={product.name}
         img={product.img}
@@ -77,28 +81,11 @@ const App = () => {
         price={product.price}
         stock={product.stock}
         />
-        <ProductCard 
-        name={product.name}
-        img={product.img}
-        description={product.description}
-        price={product.price}
-        stock={product.stock}
-        />
-        <ProductCard 
-        name={product.name}
-        img={product.img}
-        description={product.description}
-        price={product.price}
-        stock={product.stock}
-        />
-        <ProductCard 
-        name={product.name}
-        img={product.img}
-        description={product.description}
-        price={product.price}
-        stock={product.stock}
-        />
-            
+             
+      </div>
+
+      <div className="container bg-light p-3 mx-auto my-3 w-50 rounded-3">
+        <FormUser />
       </div>
 
     
