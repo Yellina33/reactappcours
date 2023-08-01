@@ -39,11 +39,12 @@ const FormUser = () => {
     });
 
     const submit = (values, {resetForm}) => {
-        // alert (json to string values )
-        alert(JSON.stringgify(values, null, 2));
-        //appel from backend simulation et reset apres 2 secondes
-        setTimeout 
-          
+       console.log(values)
+
+       setTimeout(() => {
+        resetForm()
+       }, 2000);
+       
     };
 
     
@@ -54,7 +55,7 @@ const FormUser = () => {
             onSumbit={submit}
             validationSchema={schemaValidation}
         >
-        { ({ isSubmitting }) => (
+        { ( {isSubmitting} ) => (
 
 <form className="bg-light opacity-75 rounded-3 shadow p-5 text-dark w-auto">
             <h4>Informations</h4>
